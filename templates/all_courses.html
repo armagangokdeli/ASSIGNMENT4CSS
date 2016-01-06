@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css2.css' %}">
+    <meta charset="UTF-8">
+    <title>Authors</title>
+</head>
+<body>
+<h1>Courses</h1>
+<table>
+
+    <tr>
+        <td>Course Name</td>
+        <td>Course Code</td>
+        <td>Course Classroom</td>
+        <td>Course Times</td>
+    </tr>
+
+
+{% for course in course_list %}
+    <tr>
+        <td>{{ course.name }}</td>
+        <td>{{ course.code }}</td>
+        <td>{{ course.classroom }}</td>
+        <td>{{ course.times }}</td>
+    </tr>
+
+{% endfor %}
+
+</table>
+</body>
+</html>
